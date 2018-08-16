@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace AstroEngine.Domain
 {
-	public sealed class AstroEngineService : IAstroEngineService, IDisposable
+	public sealed class AstroEngineService : IAstroEngineService
 	{
 		private readonly SwissEph _engine;
 
@@ -25,7 +25,7 @@ namespace AstroEngine.Domain
 
 			for (int planetNumber = (int)Planet.SUN; planetNumber < (int)Planet.TRUE_NODE; planetNumber++)
 			{
-				aspects.Add(GetAspect(julianDay, planetNumber));
+				aspects.Add(GetAspect(julianDay, planetNumber, latitude, longitude));
 			}
 
 			return aspects;
@@ -40,18 +40,31 @@ namespace AstroEngine.Domain
 			return julianDay;
 		}
 
-		private Aspect GetAspect(double julianDay, int current)
+		private Aspect GetAspect(double julianDay, int current, double latitude, double longitude)
 		{
 			double[] calculations = new double[6];
+			double[] cusps = new double[13];
+			double[] ascmc = new double[10];
 			string error = string.Empty;
 			int result = _engine.swe_calc(julianDay, current, SwissEph.SEFLG_SPEED, calculations, ref error);
 			string planetName = _engine.swe_get_planet_name(current);
-
+		
 			return new Aspect()
 			{
 				Planet = planetName,
 				Sign = GetSign(calculations[0])
 			};
+		}
+
+		private double GetHouses(double[] houses)
+		{
+			foreach (var house in houses)
+			{
+				int signNumber = (int)house / 30;
+			
+			}
+			return 0.0;
+
 		}
 
 		private string GetSign(double position)
@@ -72,7 +85,7 @@ namespace AstroEngine.Domain
 				case 10: return "Aquarius";
 				case 11: return "Pisces";
 				default:
-					throw new Exception("Error");
+					throw new Exception("Get Sign Error");
 			}
 		}
 
@@ -84,40 +97,6 @@ namespace AstroEngine.Domain
 
 
 
-		#region IDisposable Support
-		private bool disposedValue = false; // To detect redundant calls
-
-		void Dispose(bool disposing)
-		{
-			if (!disposedValue)
-			{
-				if (disposing)
-				{
-					// TODO: dispose managed state (managed objects).
-				}
-
-				_engine.swe_close();
-				// TODO: free unmanaged resources (unmanaged objects) and override a finalizer below.
-				// TODO: set large fields to null.
-
-				disposedValue = true;
-			}
-		}
-
-		// TODO: override a finalizer only if Dispose(bool disposing) above has code to free unmanaged resources.
-		// ~AstroEngineService() {
-		//   // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
-		//   Dispose(false);
-		// }
-
-		// This code added to correctly implement the disposable pattern.
-		public void Dispose()
-		{
-			// Do not change this code. Put cleanup code in Dispose(bool disposing) above.
-			Dispose(true);
-			// TODO: uncomment the following line if the finalizer is overridden above.
-			// GC.SuppressFinalize(this);
-		}
-		#endregion
+		
 	}
 }
