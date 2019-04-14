@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AstroEngine.API", "AstroEngine\AstroEngine.API.csproj", "{D0CE3047-9BE1-45A7-A807-21A5503FD0E3}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AstroEngine.Domain", "AstroEngine.Domain\AstroEngine.Domain.csproj", "{3B109F37-7BC5-45E4-9FAC-B0C056C30AC3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AstroEngine.Tests", "AstroEngine.Tests\AstroEngine.Tests.csproj", "{8C9C496B-FED6-4C3F-9A6E-A8451D8E2DD3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AstroEngine.Repository", "AstroEngine.Repository\AstroEngine.Repository.csproj", "{959139AD-780B-40F3-BE14-D9E3882FBB12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstroEngine.Web", "AstroEngine.Web\AstroEngine.Web.csproj", "{64F1CBF1-9B63-433C-BDAA-B01CCBAA306C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AstroEngine.Application", "AstroEngine.Application\AstroEngine.Application.csproj", "{E435EFEE-1E87-459E-9198-479F6BF511A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D0CE3047-9BE1-45A7-A807-21A5503FD0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0CE3047-9BE1-45A7-A807-21A5503FD0E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0CE3047-9BE1-45A7-A807-21A5503FD0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0CE3047-9BE1-45A7-A807-21A5503FD0E3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3B109F37-7BC5-45E4-9FAC-B0C056C30AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B109F37-7BC5-45E4-9FAC-B0C056C30AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B109F37-7BC5-45E4-9FAC-B0C056C30AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +31,14 @@ Global
 		{959139AD-780B-40F3-BE14-D9E3882FBB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{959139AD-780B-40F3-BE14-D9E3882FBB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{959139AD-780B-40F3-BE14-D9E3882FBB12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F1CBF1-9B63-433C-BDAA-B01CCBAA306C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F1CBF1-9B63-433C-BDAA-B01CCBAA306C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F1CBF1-9B63-433C-BDAA-B01CCBAA306C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F1CBF1-9B63-433C-BDAA-B01CCBAA306C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E435EFEE-1E87-459E-9198-479F6BF511A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E435EFEE-1E87-459E-9198-479F6BF511A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E435EFEE-1E87-459E-9198-479F6BF511A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E435EFEE-1E87-459E-9198-479F6BF511A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

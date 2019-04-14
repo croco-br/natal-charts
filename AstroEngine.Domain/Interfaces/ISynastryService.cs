@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace AstroEngine.Domain.Interfaces
 {
-    public interface IAstroEngineService
+    public interface ISynastryService
     {
-        Task<Chart> ProcessNatalChart(DateTime birthTime, double latitude, double longitude);
+        Task<SynastryResult> Compare(Chart a, Chart b);
     }
 }

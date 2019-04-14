@@ -2,6 +2,7 @@
 using AstroEngine.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace AstroEngine.Application
 {
@@ -14,10 +15,9 @@ namespace AstroEngine.Application
 			_svc = astroEngineService;
 		}
 
-		public List<Aspect> Calculate(DateTime birthTime)
+		public async Task<Chart> Calculate(DateTime birthTime)
 		{
-			List<Aspect> aspects = _svc.ProcessNatalChart(birthTime, 0, 0);
-			return aspects;
+			return await _svc.ProcessNatalChart(birthTime, 0, 0);			
 		}
 	}
 }

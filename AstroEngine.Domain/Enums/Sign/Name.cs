@@ -1,6 +1,6 @@
-﻿namespace AstroEngine.Domain.Enums
+﻿namespace AstroEngine.Domain.Enums.Sign
 {
-    public enum Sign
+    public enum Name
     {
         ARIES,
         TAURUS,

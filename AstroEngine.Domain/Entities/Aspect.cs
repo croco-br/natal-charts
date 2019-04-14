@@ -9,7 +9,7 @@ namespace AstroEngine.Domain.Entities
     {
         public string Planet { get; set; }
 		public double Degree { get; set; }
-		public string Sign { get; set; }
+		public Sign Sign { get; set; }
 		public bool Retrograde { get; set; }
 	}
 }
