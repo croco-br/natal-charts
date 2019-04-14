@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace AstroEngine.Domain.Services
 {
-    public sealed class AstroEngineService : IAstroEngineService
+    public sealed class ChartService : IChartService
     {
         private readonly SwissEph _engine;
 
-        public AstroEngineService()
+        public ChartService()
         {
             _engine = new SwissEph();
             _engine.swe_set_ephe_path(null);
@@ -24,7 +24,7 @@ namespace AstroEngine.Domain.Services
 
             List<Aspect> aspects = new List<Aspect>();
 
-            for (int planetNumber = (int)Planet.SUN; planetNumber < (int)Planet.TRUE_NODE; planetNumber++)
+            for (int planetNumber = 0; planetNumber < 11; planetNumber++)
             {
                 aspects.Add(GetAspect(julianDay, planetNumber, latitude, longitude));
             }
@@ -58,7 +58,7 @@ namespace AstroEngine.Domain.Services
 
             return new Aspect()
             {
-                Planet = planetName,
+                Planet = new Planet(current),
                 Sign = new Sign(calculations[0])
             };
         }

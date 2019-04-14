@@ -1,6 +1,6 @@
-﻿namespace AstroEngine.Domain.Enums
+﻿namespace AstroEngine.Domain.Enums.Planet
 {
-    public enum Planet
+    public enum Description
     {
         SUN = 0,
         MOON = 1,

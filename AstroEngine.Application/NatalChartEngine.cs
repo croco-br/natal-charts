@@ -8,9 +8,9 @@ namespace AstroEngine.Application
 {
 	public sealed class NatalChartEngine
 	{
-		private readonly IAstroEngineService _svc;
+		private readonly IChartService _svc;
 
-		public NatalChartEngine(IAstroEngineService astroEngineService)
+		public NatalChartEngine(IChartService astroEngineService)
 		{
 			_svc = astroEngineService;
 		}

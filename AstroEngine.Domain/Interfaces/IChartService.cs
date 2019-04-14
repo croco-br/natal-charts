@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AstroEngine.Domain.Interfaces
 {
-    public interface IAstroEngineService
+    public interface IChartService
     {
         Task<Chart> ProcessNatalChart(DateTime birthTime, double latitude, double longitude);
     }

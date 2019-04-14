@@ -8,6 +8,6 @@ namespace AstroEngine.Domain.Interfaces
 {
     public interface ISynastryService
     {
-        Task<SynastryResult> Compare(Chart a, Chart b);
+        Task<Synastry> Compare(Chart primary, Chart secondary);
     }
 }
