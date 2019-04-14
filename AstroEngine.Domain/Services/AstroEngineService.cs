@@ -4,8 +4,9 @@ using AstroEngine.Domain.Interfaces;
 using SwissEphNet;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace AstroEngine.Domain
+namespace AstroEngine.Domain.Services
 {
 	public sealed class AstroEngineService : IAstroEngineService
 	{
@@ -17,7 +18,7 @@ namespace AstroEngine.Domain
 			_engine.swe_set_ephe_path(null);
 		}
 
-		public List<Aspect> ProcessNatalChart(DateTime birthTime, double latitude, double longitude)
+		public async Task<List<Aspect>> ProcessNatalChart(DateTime birthTime, double latitude, double longitude)
 		{
 			double julianDay = GetJulianDayEphemerisTime(birthTime);
 

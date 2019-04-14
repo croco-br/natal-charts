@@ -8,6 +8,6 @@ namespace AstroEngine.Domain.Interfaces
 {
     public interface IAstroEngineService
     {
-        List<Aspect> ProcessNatalChart(DateTime birthTime, double latitude, double longitude);
+        Task<List<Aspect>> ProcessNatalChart(DateTime birthTime, double latitude, double longitude);
     }
 }

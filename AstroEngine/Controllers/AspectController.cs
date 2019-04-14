@@ -23,7 +23,7 @@ namespace AstroEngine.Controllers
         [HttpGet]
         public async Task<IActionResult> Get(DateTime birthTime)
         {
-			var aspects = _service.ProcessNatalChart(birthTime, 0, 0);
+			var aspects = await _service.ProcessNatalChart(birthTime, 0, 0);
 			return Ok(aspects);
 			
         }        

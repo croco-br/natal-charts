@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AstroEngine.API", "AstroEngine\AstroEngine.API.csproj", "{D0CE3047-9BE1-45A7-A807-21A5503FD0E3}"
 EndProject
@@ -10,8 +10,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AstroEngine.Tests", "AstroEngine.Tests\AstroEngine.Tests.csproj", "{8C9C496B-FED6-4C3F-9A6E-A8451D8E2DD3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AstroEngine.Repository", "AstroEngine.Repository\AstroEngine.Repository.csproj", "{959139AD-780B-40F3-BE14-D9E3882FBB12}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstroEngine.IoC", "AstroEngine.IoC\AstroEngine.IoC.csproj", "{7BC48D41-3378-40DA-B6FD-491CB979211C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{959139AD-780B-40F3-BE14-D9E3882FBB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{959139AD-780B-40F3-BE14-D9E3882FBB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{959139AD-780B-40F3-BE14-D9E3882FBB12}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7BC48D41-3378-40DA-B6FD-491CB979211C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BC48D41-3378-40DA-B6FD-491CB979211C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BC48D41-3378-40DA-B6FD-491CB979211C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BC48D41-3378-40DA-B6FD-491CB979211C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
