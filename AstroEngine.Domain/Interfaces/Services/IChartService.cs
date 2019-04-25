@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AstroEngine.Domain.Interfaces
+namespace AstroEngine.Domain.Interfaces.Services
 {
     public interface IChartService
     {

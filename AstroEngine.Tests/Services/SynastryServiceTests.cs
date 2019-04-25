@@ -18,6 +18,7 @@ namespace AstroEngine.Tests.Services
 
             SynastryService synastryService = new SynastryService();
             var result = await synastryService.Compare(chartA, chartB);
+            
             result.Should().NotBe(null);
         }
 

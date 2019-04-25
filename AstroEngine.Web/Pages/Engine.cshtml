@@ -6,7 +6,11 @@
 }
 
 <div class="container-fluid">
-
+    <label>Data A:</label><text> 25/06/1990 22:15</text><br />
+    <label>Local A:</label><text> São Paulo</text><br />
+    <label>Data B:</label><text> 07/07/1989 17:30</text><br />
+    <label>Local B:</label><text> São Paulo</text><br />
+    <button onclick="location.href='@Url.Action("Calculate","Synastry", new { birthTimeA = new DateTime(1990,06,25,22,15,00), birthTimeB = new DateTime(1989, 07, 07, 17, 30, 00) } )'">Compare</button>
 
 </div>
 

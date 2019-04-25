@@ -1,6 +1,7 @@
 ﻿using AstroEngine.Domain.Entities;
 using AstroEngine.Domain.Enums;
 using AstroEngine.Domain.Interfaces;
+using AstroEngine.Domain.Interfaces.Services;
 using SwissEphNet;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace AstroEngine.Domain.Services
     public sealed class ChartService : IChartService
     {
         private readonly SwissEph _engine;
-
+        private const int MAX_PLANET = 11;
         public ChartService()
         {
             _engine = new SwissEph();
@@ -24,7 +25,7 @@ namespace AstroEngine.Domain.Services
 
             List<Aspect> aspects = new List<Aspect>();
 
-            for (int planetNumber = 0; planetNumber < 11; planetNumber++)
+            for (int planetNumber = 0; planetNumber < MAX_PLANET; planetNumber++)
             {
                 aspects.Add(GetAspect(julianDay, planetNumber, latitude, longitude));
             }

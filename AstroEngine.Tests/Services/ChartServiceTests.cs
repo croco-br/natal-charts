@@ -11,7 +11,7 @@ namespace AstroEngine.Tests.Services
         [Fact]
         public async Task ShouldDoBasicCalculationScenario1()
         {
-            var svc = new Domain.Services.ChartService();
+            var svc = new ChartService();
             var chart = await svc.ProcessNatalChart(new DateTime(1990, 06, 25, 22, 15, 00), -23.5489, -46.6388);
 
             Assert.True(
@@ -26,7 +26,7 @@ namespace AstroEngine.Tests.Services
         [Fact]
         public async Task ShouldDoBasicCalculationScenario2()
         {
-            var svc = new Domain.Services.ChartService();
+            var svc = new ChartService();
             var chart = await svc.ProcessNatalChart(new DateTime(1989, 07, 07, 17, 30, 00), -23.5489, -46.6388);
 
             Assert.True(
@@ -41,7 +41,7 @@ namespace AstroEngine.Tests.Services
         [Fact]
         public async Task ShouldDoBasicCalculationScenario3()
         {
-            var svc = new ChartService();
+            var svc = new ChartService();            
             var chart = await svc.ProcessNatalChart(new DateTime(1980, 12, 22, 15, 00, 00), -23.5489, -46.6388);
 
             Assert.True(
